@@ -1,0 +1,53 @@
+handNum: 局数
+可能值：自然数
+
+position: 位置
+可能值: 0 | 1 | 2
+0: 位于第一个位置
+1: 位于中间位置
+2: 位于最后一位
+
+jetton: 剩余筹码
+
+strategy:
+可能值: -1 | 0 | num
+-1: all_in
+0: 让牌
+-2: 表示此行数据的此环节无效，不能做后续预测数据
+num: 一个大于0的浮点数，表示所加注金额为盲注金额的倍数
+
+hold: 
+可能值：BIG_PAIR | SMALL_PAIR | BIG_FLUSH | SMALL_FLUSH | HIGH_SINGLE | LOW_SINGLE
+BIG_PAIR: 9 ~ A 的对子
+SMALL_PAIR: 2 ~ 8 的对子
+BIG_FLUSH: 两张底牌同花色，且均>=9
+SMALL_FLUSH: 同花色，不都>=9
+HIGH_SINGLE: 单牌，且两张底牌均>=9
+LOW_SINGLE: 单牌，且两张底牌不都>=9
+
+flop/turn:
+可能值：FULL_HOUSE_UP | FLUSH | STRAIGHT | THREE_OF_A_KIND | HIGH_TWO_PAIR | LOW_TWO_PAIR | HIGH_ONE_PAIR | LOW_ONE_PAIR | FLUSH_1 | STRAIGHT_1 | HIGH_CARD
+FULL_HOUSE_UP: 葫芦及葫芦以上
+FLUSH: 同花
+STRAIGHT: 顺子
+THREE_OF_A_KIND: 三条
+HIGH_TWO_PAIR: 大的两对，至少有一对>=9
+LOW_TWO_PAIR: 小的两对，两对均<9
+HIGH_ONE_PAIR: 大的一对，对子>=9
+LOW_ONE_PAIR: 小的一对，对子<9
+FLUSH_1: 同花缺一张
+STRAIGHT_1: 顺子缺一张
+HIGH_CARD: 普通单牌
+
+river:
+可能值: FULL_HOUSE_UP | FLUSH | STRAIGHT | THREE_OF_A_KIND | HIGH_TWO_PAIR | LOW_TWO_PAIR | HIGH_ONE_PAIR | LOW_ONE_PAIR | HIGH_CARD
+FULL_HOUSE_UP: 葫芦及葫芦以上
+FLUSH: 同花
+STRAIGHT: 顺子
+THREE_OF_A_KIND: 三条
+HIGH_TWO_PAIR: 大的两对，至少有一对>=9
+LOW_TWO_PAIR: 小的两对，两对均<9
+HIGH_ONE_PAIR: 大的一对，对子>=9
+LOW_ONE_PAIR: 小的一对，对子<9
+HIGH_CARD: 普通单牌
+

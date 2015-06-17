@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# != 5 ];
+then
+	echo "Need 5 arguments."
+	exit
+fi 
+
+myPath=$(pwd)
+java -jar ${myPath}/2_less.jar $1 $2 $3 $4 $5
